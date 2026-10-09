@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>the zwei Brüder — Jasa Pembuatan Website, Cloud Deployment, Solusi AI & Hardware IT</title>
+  <meta name="description" content="the zwei Brüder adalah partner teknologi terpadu: Pembuatan Website Modern, Cloud Deployment, Pembuatan Model AI, Training & Anotasi Data, serta Hardware IT Kantor.">
+  <meta name="keywords" content="the zwei Brüder, pembuatan model ai, jasa training data ai, anotasi data labeling, jasa website, deployment vercel, hardware it kantor">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="the zwei Brüder — Web, Cloud, AI Models & Hardware IT">
+  <meta property="og:description" content="Partner teknologi terpercaya untuk pembuatan website, deployment server, pembuatan model AI & anotasi data, serta infrastruktur IT kantor.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230f172a'/><path d='M25 72L48 28H58L35 72H25ZM48 72L71 28H81L58 72H48Z' fill='%2338bdf8'/><circle cx='80' cy='32' r='6' fill='%23818cf8'/></svg>">
+
+  <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Canvas -->
+  <canvas id="ambientCanvas" class="ambient-canvas" aria-hidden="true"></canvas>
+
+  <!-- Mouse Spotlight (Desktop only) -->
+  <div id="mouseGlow" class="mouse-glow" aria-hidden="true"></div>
+
+  <!-- Header / Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand" aria-label="the zwei Brüder Beranda">
+        <div class="brand-badge">ZB</div>
+        <div class="brand-text">
+          <span class="brand-name">the zwei Brüder</span>
+          <span class="brand-tag">WEB &bull; CLOUD &bull; AI &bull; HARDWARE</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links" id="desktopNav">
+        <a href="#services" class="nav-item">Layanan</a>
+        <a href="#ai-ecosystem" class="nav-item">Solusi AI</a>
+        <a href="#why-us" class="nav-item">Keunggulan</a>
+        <a href="#estimator" class="nav-item">Estimasi Biaya</a>
+        <a href="#contact" class="nav-item">Kontak</a>
+      </nav>
+
+      <!-- Nav Action -->
+      <div class="nav-actions">
+        <a href="https://wa.me/6281234567890?text=Halo%20the%20zwei%20Br%C3%BCder,%20saya%20ingin%20konsultasi%20mengenai%20layanan%20IT%20dan%20AI" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm nav-btn-desktop">
+          <span>Konsultasi WhatsApp</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Buka navigasi menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <div class="brand">
+        <div class="brand-badge">ZB</div>
+        <span class="brand-name">the zwei Brüder</span>
+      </div>
+      <button class="drawer-close" id="drawerClose" aria-label="Tutup navigasi">&times;</button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="#services" class="drawer-link">01. Layanan Kami</a>
+      <a href="#ai-ecosystem" class="drawer-link">02. Solusi AI &amp; Anotasi Data</a>
+      <a href="#why-us" class="drawer-link">03. Keunggulan Kami</a>
+      <a href="#estimator" class="drawer-link">04. Hitung Estimasi Biaya</a>
+      <a href="#contact" class="drawer-link">05. Hubungi Tim</a>
+    </nav>
+    <div class="drawer-footer">
+      <a href="https://wa.me/6281234567890?text=Halo%20the%20zwei%20Br%C3%BCder,%20saya%20ingin%20konsultasi%20layanan%20IT%20dan%20AI" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full">
+        <span>Chat WhatsApp Admin</span>
+      </a>
+      <p class="drawer-note">Respon cepat &bull; Konsultasi gratis</p>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="content-wrapper hero-layout">
+        <div class="hero-text">
+          <div class="status-pill">
+            <span class="pulse-indicator"></span>
+            <span>Solusi Terpadu &bull; Web, Cloud, AI Models &amp; Hardware</span>
+          </div>
+
+          <h1 class="hero-title">
+            Solusi Rekayasa <span class="text-gradient">Website</span>, Model AI, &amp; Hardware IT Terpadu.
+          </h1>
+
+          <p class="hero-description">
+            <strong>the zwei Brüder</strong> membantu bisnis Anda berakselerasi dengan teknologi terkini: mulai dari <strong>pembuatan website modern</strong>, <strong>deployment cloud tanpa downtime</strong>, <strong>rekayasa model AI &amp; anotasi data presisi</strong>, hingga penyediaan <strong>infrastruktur hardware jaringan</strong> kantor yang andal.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary btn-lg">
+              <span>Konsultasikan Kebutuhan</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#estimator" class="btn btn-glass btn-lg">
+              <span>Hitung Estimasi Biaya</span>
+            </a>
+          </div>
+
+          <!-- Trust Metrics -->
+          <div class="hero-metrics hero-metrics-4">
+            <div class="metric-card">
+              <span class="metric-number">99.9%</span>
+              <span class="metric-label">Uptime Cloud</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number">&lt; 1 Detik</span>
+              <span class="metric-label">Kecepatan Web</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number">99.5%</span>
+              <span class="metric-label">Akurasi Anotasi AI</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number">1 Atap</span>
+              <span class="metric-label">Full IT &amp; AI Stack</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Interactive Visual -->
+        <div class="hero-card-display">
+          <div class="tech-showcase-box">
+            <div class="showcase-header">
+              <div class="window-dots">
+                <span class="dot d-red"></span>
+                <span class="dot d-yellow"></span>
+                <span class="dot d-green"></span>
+              </div>
+              <div class="showcase-tabs" role="tablist">
+                <button class="sc-tab active" data-tab="ai" role="tab">AI &amp; Data</button>
+                <button class="sc-tab" data-tab="web" role="tab">Website</button>
+                <button class="sc-tab" data-tab="deploy" role="tab">Deploy</button>
+                <button class="sc-tab" data-tab="hardware" role="tab">Hardware</button>
+              </div>
+            </div>
+
+            <!-- Tab Content 1: AI & Data Pipeline (Featured New Tab) -->
+            <div class="showcase-content active" id="tab-ai">
+              <div class="live-flow-card">
+                <div class="flow-step-item">
+                  <div class="step-icon-badge">1</div>
+                  <div class="step-meta">
+                    <strong>Anotasi &amp; Labeling Data</strong>
+                    <span class="text-sub">Bounding Box, Poligon, Text NLP, Audio</span>
+                  </div>
+                  <span class="badge-status-done">DATA VALID</span>
+                </div>
+
+                <div class="flow-arrow">&darr;</div>
+
+                <div class="flow-step-item highlight-step">
+                  <div class="step-icon-badge">2</div>
+                  <div class="step-meta">
+                    <strong>Model Training &amp; Fine-Tuning</strong>
+                    <span class="text-sub">LLM kustom, Computer Vision, GPU Compute</span>
+                  </div>
+                  <span class="badge-status-live">EPOCH AKTIF</span>
+                </div>
+
+                <div class="flow-arrow">&darr;</div>
+
+                <div class="flow-step-item">
+                  <div class="step-icon-badge">3</div>
+                  <div class="step-meta">
+                    <strong>Model Deployment &amp; API Integrasi</strong>
+                    <span class="text-sub">Terkoneksi langsung ke Web/App bisnis Anda</span>
+                  </div>
+                  <span class="badge-status-done">INFERENCE READY</span>
+                </div>
+              </div>
+
+              <div class="interactive-demo-bar">
+                <button type="button" class="btn btn-outline btn-sm" id="btnTestAi">
+                  <span>Simulasikan Training Model</span>
+                </button>
+                <span class="demo-feedback" id="aiFeedback">Status: Pipeline siap &bull; Loss: 0.024 &bull; Akurasi: 98.7%</span>
+              </div>
+            </div>
+
+            <!-- Tab Content 2: Website Engine -->
+            <div class="showcase-content" id="tab-web">
+              <div class="web-preview-mock">
+                <div class="browser-address-bar">
+                  <span class="browser-lock">&#128274;</span>
+                  <span class="browser-url">https://the-zwei-bruder.vercel.app</span>
+                </div>
+                <div class="mock-website-body">
+                  <div class="mock-badge-tag">PERFORMA MAKSIMAL</div>
+                  <h4 class="mock-heading">Website Responsif &amp; Elegan</h4>
+                  <p class="mock-p">Dirancang khusus agar nyaman dibuka di HP maupun laptop, dengan navigasi jelas dan form langsung ke WhatsApp.</p>
+                  <div class="scores-row">
+                    <div class="score-pill"><span>100</span> Performa</div>
+                    <div class="score-pill"><span>100</span> Aksesibilitas</div>
+                    <div class="score-pill"><span>100</span> SEO Google</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab Content 3: Deployment Flow -->
+            <div class="showcase-content" id="tab-deploy">
+              <div class="live-flow-card">
+                <div class="flow-step-item">
+                  <div class="step-icon-badge">&#10003;</div>
+                  <div class="step-meta">
+                    <strong>Git Commit &amp; Push</strong>
+                    <span class="text-sub">Trigger otomatis ke Vercel Edge</span>
+                  </div>
+                  <span class="badge-status-done">SUKSES</span>
+                </div>
+                <div class="flow-step-item highlight-step">
+                  <div class="step-icon-badge">&#9889;</div>
+                  <div class="step-meta">
+                    <strong>Edge Build &amp; SSL</strong>
+                    <span class="text-sub">Tersebar ke 300+ CDN global</span>
+                  </div>
+                  <span class="badge-status-live">ONLINE</span>
+                </div>
+              </div>
+              <div class="interactive-demo-bar">
+                <span class="demo-feedback">Deploy zero-downtime &bull; Rollback instan</span>
+              </div>
+            </div>
+
+            <!-- Tab Content 4: Hardware & Network -->
+            <div class="showcase-content" id="tab-hardware">
+              <div class="hardware-preview-box">
+                <div class="hw-item">
+                  <div class="hw-icon">&#128421;</div>
+                  <div>
+                    <strong>GPU Workstation &amp; PC Kantor</strong>
+                    <p class="text-sub">Perakitan rig PC AI training &amp; PC kerja kantor</p>
+                  </div>
+                </div>
+                <div class="hw-item">
+                  <div class="hw-icon">&#128246;</div>
+                  <div>
+                    <strong>Jaringan Kantor &amp; Router Mikrotik</strong>
+                    <p class="text-sub">Switch LAN rapi, pembagian bandwidth stabil anti putus</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RUNNING TICKER / MARQUEE -->
+    <section class="ticker-strip">
+      <div class="ticker-track">
+        <div class="ticker-content">
+          <span>&bull; PEMBUATAN MODEL AI KUSTOM</span>
+          <span>&bull; TRAINING DATA &amp; FINE-TUNING MODEL</span>
+          <span>&bull; JASA ANOTASI &amp; LABELING DATASET</span>
+          <span>&bull; PEMBUATAN WEBSITE MODERN</span>
+          <span>&bull; VERCEL &amp; CLOUD DEPLOYMENT</span>
+          <span>&bull; HARDWARE IT &amp; JARINGAN MIKROTIK KANTOR</span>
+          <span>&bull; INTEGRASI AI API KE APLIKASI WEB</span>
+        </div>
+        <div class="ticker-content" aria-hidden="true">
+          <span>&bull; PEMBUATAN MODEL AI KUSTOM</span>
+          <span>&bull; TRAINING DATA &amp; FINE-TUNING MODEL</span>
+          <span>&bull; JASA ANOTASI &amp; LABELING DATASET</span>
+          <span>&bull; PEMBUATAN WEBSITE MODERN</span>
+          <span>&bull; VERCEL &amp; CLOUD DEPLOYMENT</span>
+          <span>&bull; HARDWARE IT &amp; JARINGAN MIKROTIK KANTOR</span>
+          <span>&bull; INTEGRASI AI API KE APLIKASI WEB</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 PILLARS: SERVICES SECTION -->
+    <section class="section-area" id="services">
+      <div class="content-wrapper">
+        <div class="section-head text-center">
+          <span class="sub-badge">EMPAT PILAR SOLUSI</span>
+          <h2 class="section-title">Solusi Komprehensif: Software, AI &amp; Hardware</h2>
+          <p class="section-sub">
+            Dari anotasi data mentah, rekayasa model AI cerdas, pembuatan website modern, hingga penataan server dan jaringan kantor Anda.
+          </p>
+        </div>
+
+        <div class="services-cards-grid services-cards-4">
+          <!-- Card 1: AI Model & Data (NEW FEATURE) -->
+          <div class="service-box featured-box">
+            <div class="popular-ribbon">FITUR BARU &bull; AI LAB</div>
+            <div class="service-icon-wrap icon-amber">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 0-4 4v1H7a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3h1v1a4 4 0 0 0 4 4 4 4 0 0 0 4-4v-1h1a3 3 0 0 0 3-3v-2a3 3 0 0 0-3-3h-1V6a4 4 0 0 0-4-4z"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="10" r="1"/><path d="M9 15h6"/></svg>
+            </div>
+            <div class="service-order">LAYANAN 01</div>
+            <h3 class="service-name">Pembuatan Model AI, Training &amp; Anotasi</h3>
+            <p class="service-desc">
+              Kembangkan kecerdasan buatan khusus untuk bisnis Anda: dari penyiapan dataset berkualitas melalui anotasi, proses training model, hingga integrasi API siap pakai.
+            </p>
+            <ul class="feature-checklist">
+              <li><span>&check;</span> <strong>Pembuatan Model AI:</strong> Computer Vision, Custom LLM, NLP, &amp; Prediksi Data</li>
+              <li><span>&check;</span> <strong>Training Data &amp; Fine-Tuning:</strong> Optimasi model pada GPU Cloud / On-Premise</li>
+              <li><span>&check;</span> <strong>Anotasi Data:</strong> Bounding Box gambar, segmentasi poligon, teks &amp; audio</li>
+              <li><span>&check;</span> <strong>Integrasi API:</strong> Sambungkan model AI langsung ke Website atau Sistem Anda</li>
+            </ul>
+            <div class="tech-tags">
+              <span>PyTorch</span>
+              <span>TensorFlow</span>
+              <span>YOLO</span>
+              <span>HuggingFace</span>
+              <span>Custom LLM</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Web Development -->
+          <div class="service-box">
+            <div class="service-icon-wrap icon-cyan">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div class="service-order">LAYANAN 02</div>
+            <h3 class="service-name">Pembuatan Website Modern</h3>
+            <p class="service-desc">
+              Website berkualitas tinggi yang nyaman dipandang, ringan dibuka di smartphone, dan siap meningkatkan citra serta penjualan bisnis Anda.
+            </p>
+            <ul class="feature-checklist">
+              <li><span>&check;</span> Landing page produk &amp; company profile profesional</li>
+              <li><span>&check;</span> Web app interaktif, dashboard analitik &amp; katalog produk</li>
+              <li><span>&check;</span> Integrasi tombol WhatsApp &amp; formulir pesan langsung</li>
+              <li><span>&check;</span> 100% responsif di Android, iPhone &amp; Laptop</li>
+            </ul>
+            <div class="tech-tags">
+              <span>Next.js</span>
+              <span>React</span>
+              <span>HTML5 / CSS3</span>
+              <span>SEO Ready</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Support & Cloud Deployment -->
+          <div class="service-box">
+            <div class="service-icon-wrap icon-violet">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg>
+            </div>
+            <div class="service-order">LAYANAN 03</div>
+            <h3 class="service-name">Support &amp; Cloud Deployment</h3>
+            <p class="service-desc">
+              Pastikan aplikasi atau website Anda selalu online 24 jam tanpa kendala server down, konfigurasi domain yang rumit, ataupun kendala SSL.
+            </p>
+            <ul class="feature-checklist">
+              <li><span>&check;</span> Setup deployment otomatis ke Vercel Edge &amp; Cloudflare</li>
+              <li><span>&check;</span> Pengaturan domain kustom (.com, .id, dll) &amp; SSL gratis</li>
+              <li><span>&check;</span> Automasi CI/CD dari GitHub (sekali klik langsung live)</li>
+              <li><span>&check;</span> Pemeliharaan VPS Linux, Docker &amp; backup database berkala</li>
+            </ul>
+            <div class="tech-tags">
+              <span>Vercel</span>
+              <span>Cloudflare</span>
+              <span>GitHub Actions</span>
+              <span>Linux VPS</span>
+            </div>
+          </div>
+
+          <!-- Card 4: IT Hardware & Jaringan -->
+          <div class="service-box">
+            <div class="service-icon-wrap icon-emerald">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            </div>
+            <div class="service-order">LAYANAN 04</div>
+            <h3 class="service-name">Hardware IT &amp; Jaringan Kantor</h3>
+            <p class="service-desc">
+              Dukungan fisik untuk operasional kantor Anda: pengadaan workstation (termasuk GPU PC untuk training AI), perakitan PC, penataan kabel LAN &amp; Wi-Fi.
+            </p>
+            <ul class="feature-checklist">
+              <li><span>&check;</span> Pengadaan &amp; perakitan PC kantor serta GPU Workstation</li>
+              <li><span>&check;</span> Instalasi kabel LAN Cat6 rapi, switch &amp; router Mikrotik</li>
+              <li><span>&check;</span> Pemisahan Wi-Fi tamu dan staf kantor (keamanan data)</li>
+              <li><span>&check;</span> Kontrak servis &amp; pemeliharaan berkala on-site</li>
+            </ul>
+            <div class="tech-tags">
+              <span>Mikrotik</span>
+              <span>LAN Cat6</span>
+              <span>GPU Workstation</span>
+              <span>NAS Storage</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETAILED AI ECOSYSTEM SECTION -->
+    <section class="section-area section-alt" id="ai-ecosystem">
+      <div class="content-wrapper">
+        <div class="section-head text-center">
+          <span class="sub-badge">EKOSISTEM KECERDASAN BUATAN</span>
+          <h2 class="section-title">Alur Lengkap: Anotasi Data hingga Model AI Live</h2>
+          <p class="section-sub">
+            Kami mengawal perjalanan AI perusahaan Anda dari bahan mentah hingga model pintar yang menghasilkan nilai bisnis nyata.
+          </p>
+        </div>
+
+        <div class="ai-stages-grid">
+          <div class="ai-stage-card">
+            <div class="stage-num">01</div>
+            <h4>Anotasi &amp; Quality Control</h4>
+            <p>Data mentah Anda (foto, video, dokumen teks, rekaman suara) kami beri label dengan akurasi tinggi oleh tim khusus (bounding box, semantic segmentation, sentiment labeling).</p>
+            <span class="stage-tag">Dataset Bersih &amp; Siap Pakai</span>
+          </div>
+
+          <div class="ai-stage-card">
+            <div class="stage-num">02</div>
+            <h4>Model Architecture &amp; Training</h4>
+            <p>Memilih arsitektur model terbaik atau melakukan fine-tuning model open-source mutakhir pada GPU berkecepatan tinggi agar model memahami domain bisnis unik Anda.</p>
+            <span class="stage-tag">High Accuracy &amp; Low Loss</span>
+          </div>
+
+          <div class="ai-stage-card">
+            <div class="stage-num">03</div>
+            <h4>Evaluasi &amp; Optimization</h4>
+            <p>Pengujian ketat terhadap data uji (testing set), kuantisasi model agar hemat daya komputasi, serta pengujian kecepatan inferensi respon dalam hitungan milidetik.</p>
+            <span class="stage-tag">Benchmark Teruji</span>
+          </div>
+
+          <div class="ai-stage-card">
+            <div class="stage-num">04</div>
+            <h4>Deployment &amp; Integrasi Web</h4>
+            <p>Model di-deploy menjadi REST API atau microservice aman di cloud, dan diintegrasikan langsung ke dashboard web, aplikasi mobile, atau bot internal kantor Anda.</p>
+            <span class="stage-tag">Siap Pakai 24/7</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US SECTION -->
+    <section class="section-area" id="why-us">
+      <div class="content-wrapper">
+        <div class="section-head text-center">
+          <span class="sub-badge">KEUNGGULAN KAMI</span>
+          <h2 class="section-title">Kenapa Memilih "the zwei Brüder"?</h2>
+          <p class="section-sub">
+            Sinergi komplit antara keahlian Artificial Intelligence, rekayasa software modern, dan keandalan hardware fisik.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feat-icon">&#9879;</div>
+            <h4>Solusi Satu Pintu (All-in-One)</h4>
+            <p>Tidak perlu menyewa agensi software, spesialis AI, dan teknisi hardware terpisah. Kami menjembatani semuanya dalam satu tim kompak.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feat-icon">&#127919;</div>
+            <h4>Anotasi Presisi Tinggi</h4>
+            <p>Dataset dijamin terverifikasi dengan multi-layer quality control sehingga training model AI Anda tidak menghasilkan bias atau halusinasi.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feat-icon">&#9889;</div>
+            <h4>Cepat &amp; Transparan</h4>
+            <p>Estimasi biaya transparan tanpa biaya siluman. Pengerjaan cepat dengan progres terukur yang dilaporkan berkala.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feat-icon">&#128172;</div>
+            <h4>Konsultasi &amp; Garansi</h4>
+            <p>Dukungan teknis responsif melalui WhatsApp untuk konsultasi berkala, garansi sistem, serta panduan operasional tim Anda.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTIMATOR / KALKULATOR SECTION (Updated with AI options) -->
+    <section class="section-area section-alt" id="estimator">
+      <div class="content-wrapper">
+        <div class="section-head text-center">
+          <span class="sub-badge">ESTIMASI BIAYA INTERAKTIF</span>
+          <h2 class="section-title">Hitung Kebutuhan Proyek Anda</h2>
+          <p class="section-sub">
+            Pilih layanan yang Anda butuhkan (termasuk Model AI &amp; Anotasi) untuk melihat perkiraan biaya dan diskusikan langsung via WhatsApp.
+          </p>
+        </div>
+
+        <div class="estimator-container">
+          <!-- Left: User Selection Options -->
+          <div class="estimator-options">
+            <div class="opt-group">
+              <label class="opt-title">1. Pilih Kategori Layanan:</label>
+              <div class="opt-button-grid" id="categoryGroup">
+                <button type="button" class="btn-opt active" data-cat="ai">
+                  <strong>Solusi AI &amp; Anotasi</strong>
+                  <small>Model AI &bull; Training &bull; Labeling</small>
+                </button>
+                <button type="button" class="btn-opt" data-cat="web">
+                  <strong>Website Modern</strong>
+                  <small>Landing page / Web app</small>
+                </button>
+                <button type="button" class="btn-opt" data-cat="deploy">
+                  <strong>Cloud Deployment</strong>
+                  <small>Vercel / VPS / Domain</small>
+                </button>
+                <button type="button" class="btn-opt" data-cat="hardware">
+                  <strong>Hardware &amp; LAN</strong>
+                  <small>PC kantor &amp; Mikrotik</small>
+                </button>
+                <button type="button" class="btn-opt" data-cat="paket" style="grid-column: span 2;">
+                  <strong>Paket All-in-One (Web + AI + Hardware)</strong>
+                  <small>Solusi terpadu hemat untuk transformasi digital</small>
+                </button>
+              </div>
+            </div>
+
+            <div class="opt-group">
+              <label class="opt-title">2. Skala Kebutuhan:</label>
+              <div class="opt-button-grid scale-grid" id="scaleGroup">
+                <button type="button" class="btn-opt active" data-scale="starter">
+                  <strong>Starter / MVP</strong>
+                  <small>Dataset kecil / AI dasar</small>
+                </button>
+                <button type="button" class="btn-opt" data-scale="pro">
+                  <strong>Bisnis / Pro</strong>
+                  <small>Custom model &amp; anotasi masif</small>
+                </button>
+                <button type="button" class="btn-opt" data-scale="custom">
+                  <strong>Custom Enterprise</strong>
+                  <small>Sistem kompleks &amp; dedicated GPU</small>
+                </button>
+              </div>
+            </div>
+
+            <div class="opt-group">
+              <label class="opt-title">3. Opsi Tambahan (Opsional):</label>
+              <div class="addons-list">
+                <label class="checkbox-card">
+                  <input type="checkbox" id="checkSupport" checked>
+                  <span class="check-box"></span>
+                  <div>
+                    <strong>Pemeliharaan &amp; Retraining Model Berkala</strong>
+                    <small>Update akurasi model &amp; monitoring performa bulanan</small>
+                  </div>
+                </label>
+                <label class="checkbox-card">
+                  <input type="checkbox" id="checkFastTrack">
+                  <span class="check-box"></span>
+                  <div>
+                    <strong>Pengerjaan Prioritas / Fast-Track</strong>
+                    <small>Deadline dipercepat dengan alokasi tim khusus</small>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Summary Card -->
+          <div class="estimator-result-card">
+            <div class="result-top">
+              <span class="result-badge">RINGKASAN ESTIMASI</span>
+              <h3 class="result-name" id="resTitle">Solusi AI: Anotasi &amp; Model (Starter)</h3>
+              <div class="result-price" id="resPrice">Mulai Rp 2.500.000</div>
+              <p class="result-description" id="resDesc">
+                Anotasi dataset awal hingga 1.000 item atau pembuatan prototipe model AI sederhana (NLP / Computer Vision) siap uji coba.
+              </p>
+            </div>
+
+            <hr class="card-divider">
+
+            <div class="result-items">
+              <span class="items-heading">Sudah termasuk:</span>
+              <ul class="items-list" id="resList">
+                <li>Anotasi data dengan verifikasi kualitas 2 lapis</li>
+                <li>Format dataset standar industri (YOLO / COCO / JSON)</li>
+                <li>Panduan integrasi ke sistem bisnis Anda</li>
+              </ul>
+            </div>
+
+            <button type="button" class="btn btn-primary btn-full" id="btnWhatsappEstimator">
+              <span>Konsultasikan via WhatsApp</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <p class="result-guarantee">&#128077; Tanpa komitmen awal &bull; Diskusi ramah &amp; gratis</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section-area" id="contact">
+      <div class="content-wrapper">
+        <div class="contact-layout">
+          <div class="contact-details">
+            <span class="sub-badge">HUBUNGI KAMI</span>
+            <h2 class="section-title">Mulai Diskusi Proyek Anda Hari Ini</h2>
+            <p class="section-sub">
+              Sampaikan kebutuhan pembuatan model AI, jasa anotasi dataset, pembuatan website, atau kebutuhan hardware kantor Anda kepada tim <strong>the zwei Brüder</strong>.
+            </p>
+
+            <div class="contact-items-list">
+              <a href="https://wa.me/6281234567890?text=Halo%20the%20zwei%20Br%C3%BCder,%20saya%20ingin%20konsultasi%20mengenai%20layanan%20IT%20dan%20AI" target="_blank" rel="noopener noreferrer" class="contact-item-row">
+                <div class="ci-icon icon-emerald">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <div class="ci-label">WhatsApp Bisnis (Respon Cepat)</div>
+                  <div class="ci-val">+62 812-3456-7890</div>
+                </div>
+              </a>
+
+              <a href="mailto:hello@zweibruder.dev" class="contact-item-row">
+                <div class="ci-icon icon-cyan">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <div class="ci-label">Email Resmi</div>
+                  <div class="ci-val">hello@zweibruder.dev</div>
+                </div>
+              </a>
+
+              <div class="contact-item-row no-click">
+                <div class="ci-icon icon-violet">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                </div>
+                <div>
+                  <div class="ci-label">Waktu Operasional</div>
+                  <div class="ci-val">Senin – Sabtu: 08:30 – 21:00 WIB</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form (Auto-forwards to WhatsApp) -->
+          <div class="contact-form-box">
+            <h3 class="form-title">Kirim Pesan Konsultasi</h3>
+            <p class="form-subtitle">Pesan Anda akan otomatis diformat dan diteruskan ke WhatsApp tim kami.</p>
+
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="inputName">Nama / Perusahaan *</label>
+                <input type="text" id="inputName" required placeholder="Contoh: Budi Santoso / PT Data Cerdas" class="form-input">
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="inputPhone">Nomor WhatsApp *</label>
+                  <input type="tel" id="inputPhone" required placeholder="08xxxxxxxxxx" class="form-input">
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail">Email *</label>
+                  <input type="email" id="inputEmail" required placeholder="nama@email.com" class="form-input">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="inputService">Layanan yang Dibutuhkan *</label>
+                <select id="inputService" class="form-input form-select" required>
+                  <option value="Pembuatan Model AI & Training">Pembuatan Model AI &amp; Training Data</option>
+                  <option value="Jasa Anotasi & Labeling Data">Jasa Anotasi &amp; Labeling Data</option>
+                  <option value="Pembuatan Website Modern">Pembuatan Website Modern</option>
+                  <option value="Support & Cloud Deployment">Support &amp; Cloud Deployment (Vercel/VPS)</option>
+                  <option value="Hardware IT & Jaringan Kantor">Hardware IT &amp; Jaringan Kantor</option>
+                  <option value="Solusi Lengkap (AI + Web + Hardware)">Solusi Lengkap (AI + Web + Hardware)</option>
+                  <option value="Konsultasi IT Bebas">Konsultasi IT Bebas / Lainnya</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="inputMessage">Rincian Kebutuhan / Dataset *</label>
+                <textarea id="inputMessage" rows="4" required placeholder="Jelaskan jenis data/anotasi yang dibutuhkan, tujuan model AI, atau rincian website/hardware yang ingin dikembangkan..." class="form-input"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full">
+                <span>Kirim Konsultasi ke WhatsApp</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="content-wrapper footer-grid">
+      <div class="footer-brand-col">
+        <div class="brand">
+          <div class="brand-badge">ZB</div>
+          <span class="brand-name">the zwei Brüder</span>
+        </div>
+        <p class="footer-desc">
+          Partner teknologi terpadu untuk rekayasa model AI, anotasi data presisi, pembuatan website modern, dan infrastruktur IT kantor yang tangguh.
+        </p>
+        <div class="vercel-deploy-tag">
+          <svg width="14" height="14" viewBox="0 0 1155 1000" fill="currentColor"><path d="m577.3 0 577.4 1000H0z"/></svg>
+          <span>Ready for Vercel Deployment</span>
+        </div>
+      </div>
+
+      <div class="footer-nav-col">
+        <h4 class="footer-head">Layanan</h4>
+        <ul>
+          <li><a href="#services">Model AI &amp; Anotasi</a></li>
+          <li><a href="#services">Pembuatan Web</a></li>
+          <li><a href="#services">Cloud Deployment</a></li>
+          <li><a href="#services">Hardware &amp; LAN</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-nav-col">
+        <h4 class="footer-head">Navigasi</h4>
+        <ul>
+          <li><a href="#hero">Beranda</a></li>
+          <li><a href="#ai-ecosystem">Alur AI</a></li>
+          <li><a href="#estimator">Estimasi</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-nav-col">
+        <h4 class="footer-head">Kontak</h4>
+        <p class="footer-contact-text">hello@zweibruder.dev</p>
+        <p class="footer-contact-text">+62 812-3456-7890</p>
+        <p class="footer-contact-text">Indonesia &bull; Remote &amp; On-Site</p>
+      </div>
+    </div>
+
+    <div class="content-wrapper footer-bottom">
+      <p>&copy; <span id="currentYear">2026</span> <strong>the zwei Brüder</strong>. Hak Cipta Dilindungi.</p>
+      <p class="footer-craft">Dibuat dengan cermat &bull; Web, AI &amp; Infrastructure</p>
+    </div>
+  </footer>
+
+  <!-- Floating Mobile WhatsApp Quick Button -->
+  <a href="https://wa.me/6281234567890?text=Halo%20the%20zwei%20Br%C3%BCder,%20saya%20ingin%20tanya%20layanan%20AI%20dan%20IT" target="_blank" rel="noopener noreferrer" class="floating-wa-btn" aria-label="Chat WhatsApp Admin">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <span class="wa-tooltip">Tanya Kami di WA</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
